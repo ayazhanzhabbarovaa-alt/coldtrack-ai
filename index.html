@@ -279,15 +279,14 @@ function submitForm() {
     return;
   }
   var payload = {
-    firstName: fname,
-    lastName: document.getElementById('lname').value,
-    company: document.getElementById('company').value,
+    company_name: fname + ' ' + document.getElementById('lname').value,
     email: email,
-    cargoType: cargo,
-    temperature: document.getElementById('temp').value,
-    message: document.getElementById('message').value,
-    currentTemp: 10,
-    submittedAt: new Date().toISOString()
+    cargo_type: cargo,
+    required_temp_c: document.getElementById('temp').value,
+    source: document.getElementById('message').value,
+    origin: 'Almaty',
+    destination: 'Astana'
+  };
   };
   fetch('https://ai.mnu.kz/webhook/coldtrack-intake', {
     method: 'POST',
