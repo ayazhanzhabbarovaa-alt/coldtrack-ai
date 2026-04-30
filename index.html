@@ -287,7 +287,6 @@ function submitForm() {
     origin: 'Almaty',
     destination: 'Astana'
   };
-  };
   fetch('https://ai.mnu.kz/webhook/coldtrack-intake', {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
@@ -298,5 +297,3 @@ function submitForm() {
   document.getElementById('form-success').style.display = 'block';
 }
 </script>
-</body>
-</html>
